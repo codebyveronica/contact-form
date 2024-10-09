@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/media-query.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <main>
+        <h1>Contact Us</h1>
+        <form>
+            <div class="complet-name-container">
+                <div class="name-container">
+                    <label class="label-input" for="first-name">First Name <strong>*</strong></label>
+                    <input class="input" type="text" name="first-name" id="first-name">
+                    <span></span>
+                </div>
+
+                <div class="name-container">
+                    <label class="label-input" for="last-name">Last Name <strong>*</strong></label>
+                    <input class="input" type="text" name="last-name" id="last-name">
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="email-container">
+                <label class="label-input" for="email">Email Address <strong>*</strong></label>
+                <input class="input" type="email" name="email" id="email">
+                <span></span>
+            </div>
+            
+            <div class="query-container">
+                <label class="label-query" for="type">Query Type <strong>*</strong></label>
+                <div class="query-type-container">
+                    <div class="type-container">
+                        <label class="form-control" for="general-enquiry">
+                            <input type="radio" name="type" id="general-enquiry">
+                            General Enquiry
+                        </label>
+                    </div>
+                    <div class="type-container">
+                        <label class="form-control" for="support-request">
+                            <input type="radio" name="type" id="support-request">
+                            Support Request
+                        </label>
+                    </div>
+                </div>
+                <span></span>
+            </div>
+
+            <div class="message-container">
+                <label class="label-input" for="message">Message <strong>*</strong></label>
+                <textarea name="message" id="message"></textarea>
+                <span></span>
+            </div>
+
+            <div class="checkbox-container">
+                <div class="checkbox">
+                    <input type="checkbox" name="consent" id="consent">
+                    <label class="label-consent" for="consent">I consent to being contacted by the team <strong>*</strong></label>
+                </div>
+                <span></span>
+            </div>
+
+            <button class="submit-button" type="submit" id="submit">Submit</button>
+        </form>
+    </main>
+</body>
+</html>
