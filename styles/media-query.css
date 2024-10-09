@@ -1,0 +1,72 @@
+:root {
+    /* ## Colors */
+    /* ### Primary */
+    --green200: #dff1e7;
+    --green600: #0c7d69;
+    --red: #d73c3c;
+
+    /* ### Neutral */
+    --white: #ffffff;
+    --grey500: #87a3a6;
+    --grey900: #2b4246;
+
+    /* ## Fonts */
+    --font: "Karla", sans-serif;
+}
+
+@media screen and (min-width: 1440px) {
+    main {
+        margin-top: 3em;
+        width: 600px;
+        padding: 1.5em;
+    }
+
+    input {
+        transition: .1s ease-in-out;
+    }
+
+    input:hover {
+        border-color: var(--green600);
+        cursor: pointer;
+    }
+
+    .complet-name-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .name-container {
+        width: 49%;
+    }
+
+    .query-type-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .type-container {
+        width: 49%;
+    }
+
+    .form-control {
+        cursor: pointer ;
+    }
+
+    textarea {
+        height: 5em;
+    }
+
+    .label-consent:hover {
+        cursor: pointer;
+    }
+
+    .submit-button {
+        cursor: pointer;
+    }
+
+    .submit-button:hover {
+        background-color: var(--grey900);
+    }
+}
