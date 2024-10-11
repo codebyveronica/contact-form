@@ -16,46 +16,47 @@
             <div class="complet-name-container">
                 <div class="name-container">
                     <label class="label-input" for="first-name">First Name <strong>*</strong></label>
-                    <input class="input" type="text" name="first-name" id="first-name">
-                    <span></span>
+                    <input class="input" type="text" name="first-name" id="first-name" oninput="checkInputValue(this, 'This field is required')">
+                    <span class="required-span"></span>
                 </div>
 
                 <div class="name-container">
                     <label class="label-input" for="last-name">Last Name <strong>*</strong></label>
-                    <input class="input" type="text" name="last-name" id="last-name">
-                    <span></span>
+                    <input class="input" type="text" name="last-name" id="last-name" oninput="checkInputValue(this, 'This field is required')">
+                    <span class="required-span"></span>
                 </div>
             </div>
 
             <div class="email-container">
                 <label class="label-input" for="email">Email Address <strong>*</strong></label>
-                <input class="input" type="email" name="email" id="email">
-                <span></span>
+                <input class="input" type="email" name="email" id="email" oninput="checkIfEmailIsValid(this)">
+                <span class="required-span" id="emailFeedback"></span>
             </div>
             
             <div class="query-container">
-                <label class="label-query" for="type">Query Type <strong>*</strong></label>
-                <div class="query-type-container">
-                    <div class="type-container">
-                        <label class="form-control" for="general-enquiry">
-                            <input type="radio" name="type" id="general-enquiry">
-                            General Enquiry
-                        </label>
+                <fieldset> Query Type *
+                    <div class="query-type-container">
+                        <div class="type-container">
+                            <label class="form-control" for="general-enquiry">
+                                <input type="radio" name="type" id="general-enquiry">
+                                General Enquiry
+                            </label>
+                        </div>
+                        <div class="type-container">
+                            <label class="form-control" for="support-request">
+                                <input type="radio" name="type" id="support-request">
+                                Support Request
+                            </label>
+                        </div>
                     </div>
-                    <div class="type-container">
-                        <label class="form-control" for="support-request">
-                            <input type="radio" name="type" id="support-request">
-                            Support Request
-                        </label>
-                    </div>
-                </div>
-                <span></span>
+                </fieldset>
+                <span class="required-span" id="radioFeedback"></span>
             </div>
 
             <div class="message-container">
                 <label class="label-input" for="message">Message <strong>*</strong></label>
-                <textarea name="message" id="message"></textarea>
-                <span></span>
+                <textarea name="message" id="message" oninput="checkInputValue(this, 'This field is required')"></textarea>
+                <span class="required-span"></span>
             </div>
 
             <div class="checkbox-container">
@@ -63,11 +64,19 @@
                     <input type="checkbox" name="consent" id="consent">
                     <label class="label-consent" for="consent">I consent to being contacted by the team <strong>*</strong></label>
                 </div>
-                <span></span>
+                <span class="required-span" id="consentFeedback"></span>
             </div>
 
             <button class="submit-button" type="submit" id="submit">Submit</button>
         </form>
     </main>
+
+    <div class="form-sent hide" id="sentMessage">
+        <span class="sent">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" fill="none" viewBox="0 0 20 21"><path fill="#fff" d="M14.28 7.72a.748.748 0 0 1 0 1.06l-5.25 5.25a.748.748 0 0 1-1.06 0l-2.25-2.25a.75.75 0 1 1 1.06-1.06l1.72 1.72 4.72-4.72a.75.75 0 0 1 1.06 0Zm5.47 2.78A9.75 9.75 0 1 1 10 .75a9.76 9.76 0 0 1 9.75 9.75Zm-1.5 0A8.25 8.25 0 1 0 10 18.75a8.26 8.26 0 0 0 8.25-8.25Z"/></svg>
+            Message Sent!
+        </span>
+        <p>Thanks for completing the form. We'll be in touch soon!</p>
+    </div>
 </body>
 </html>
